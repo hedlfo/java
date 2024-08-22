@@ -36,3 +36,359 @@ create
 
 다시 git에서
 git status 치기
+
+git add . 치기
+
+다시 git status 치기
+
+
+git remote add origin https://github.com/hedlfo/java.git 치기
+그러면 아무것도 안뜸
+
+ git push --set-upstream origin master
+치기
+
+시스템 환경변수
+새로 만들기
+JAVA_HOME
+C-프로그램파일즈-자바-22
+PATH-편집
+새로만들기-%JAVA_HOME%
+
+이러면 cmd 창에 영어로 뜬다.
+
+구글에 인텔리j라고 치기
+다운로드
+사진1
+
+src- com.himedia.java
+-new java class
+-A_helloworld
+add
+
+//2.  JVM(Java Virturl Machine)
+// JVM 은 자바를 실행하기 위한 가상 기계라고 할 수 있다.
+//자바로 작성된 애플리케이션은 모두 이 가상 컴퓨터에서 만 실행되기 때문에, 
+// 자바 애플리케이션이 실행되기 위해서는 반드시 JVM이 필요하다.
+//요즘엔 바이트코드(컴파일 된 자바코드)를 하드웨어의 기계어로 바로 변환해주는 JIT컴파일러와
+//향상된 최적화 기술이 적용되어서 속도의 격차를 많이 줄였다.
+//Java 애플리케이션은 JVM하고만 상호작용을 하기 떼문에 OS와 하드웨어에 독립적이라
+//다른 OS에서도 프로그램의 변경없이 실행이 가능하다.
+//단, JVM은 OS에 종속적이기 때문에 해당 OS에서 실행가능한 JVM이 필요하다.
+
+B_variable_function-  java class 만들기
+
+
+//* 변수 : 값을 저장할 수 있는 메모리상의 공간
+// 변수 타입 : 변수에 저장될 값이 어떤 타입인지를 지정하는 것.
+// 변수 이름 : 변수에 붙인 이름
+// 변수 초기화 : 변수를 사용하기 전에 처음으로 값을 저장하는 것.
+
+//* 변수의 명명 규칙
+// 1. 대소문자가 구분되며 길이에 제한이 없다.
+// 2. 예약어를 사용해서는 안된다. ex)true, false, break, int, for, ...
+// 3. 숫자로 시작하면 안된다.
+// 4. 특수문자 : '_'와 '$'만을 허용한다.
+//*변수의 타입
+//기본형(Primitive type)과 참조형(Reference type)
+//자료형은 크게 '기본형'과 '참조형' 두 가지로 나눌 수 있는데,
+//기본형 변수는 실제 값(data)를 저장하는 반면,
+//참조형 변수는 어떤 값이 저장되어 있는 주소(memory address)를 값으로 갖는다.
+// -기본형: 논리형(boolean), 문자형(char), 정수형(byte, short, int, long), 실수형(float, double)
+// -참조형: 객체의 주소를 저장한다. 기본형을 제외한 나머지 타입.
+
+//**기본형
+//-논리형 : boolean
+//true 와 false 중 하나를 값으로 갖으며, 조건식과 논리적 계산에 사용된다.
+//크기:1byte
+// 범위 : -
+//-문자형 : char
+// 문자를 저장하는데 사용되며, 하나의 문자만 저장할 수 있다.
+// 크기 : 2byte
+// 범위 : 
+//-정수형 : byte, short, int, long
+// 정수를 저장하는데 사용된다. byte는 이진데이터를 다룰 때, short는 C언어와의 호환을 위해 추가되었다.
+// 크기 : byte(1byte-8bit), short(2byte), int(4byte), long(8byte)
+//-실수형: float, double
+//크기:float(4byte), double(8byte)
+//*상수(Constant):변수와 마찬가지로 '값을 저장할 수 있는 공간'이지만,
+//변수와 달리 한번 값을 저장하면 다른 값으로 변경할 수 없다.
+
+public class B_variable_function {
+    
+    public static void exam1() {
+        
+        
+    }
+public static void main(String[] args) {
+    String myStr="안녕하세요!";
+    System.out.println(myStr);
+
+    int num=10;
+    System.out.println(num);
+
+    byte bNum=127;
+    System.out.println(bNum);
+
+    float fNum=3.14f;
+    System.out.println(fNum);
+
+    double dNum=3.14432534564;
+    System.out.println(dNum);
+
+    final float PI =3.14f;
+    //PI = 3.15; //
+
+}
+}
+
+-----------------------2번째
+
+public class B_variable_function {
+
+    public static void exam1() {
+        String myStr = "안녕하세요!";
+        System.out.println(myStr);
+
+        int num = 10;
+        System.out.println(num);
+
+        byte bNum = 127;
+        System.out.println(bNum);
+
+        float fNum = 3.14f;
+        System.out.println(fNum);
+
+        double dNum = 3.14432534564;
+        System.out.println(dNum);
+
+        final float PI = 3.14f;
+        //PI = 3.15; //
+
+    }
+
+// *함수 :프로그래밍에서 특정 작업을 수행하기 위해 작성된 코드의 묶음
+//1. 함수 선언 : 함수의 이름과 특성을 정의하는 부분이다.
+//2. 매개변수(Parameters)":매개변수는 함수가 작업을 수행하는데 필요한 입력값을 전달하는 부분이다.
+//3. 반환타입(Return type) : 함수가 어떤 유형의 값을 반환할
+
+    public static int add(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+//minus 함수
+
+//multiply 함수 (곱하기)
+
+//divide(나누기) : 소수점으로 반환 받는다.
+
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 3;
+
+        int result = add(3, 5);
+        System.out.println(result);
+    }
+
+
+//호출
+
+//호출후 받은 결과값 출력
+}
+
+
+//*return
+//1. 값을 반환 : 함수가 어떤 밧을 계산하거나 처리한 후, 그 결과를 호출한 코드로 돌려줄 때 사용.
+//2. 함수 종료 : return 문이 실행되면 해당 함수는 즉시 종료가 된다.
+
+->C
+//*진법
+// 컴퓨터는 2진수(0과 1)밖에 모르기 때문에, 2진수로 바뀌어 저장된다.
+//int age =25; ->age =  11001;
+
+//* 비트(bit)와 바이트(byte)
+// 한 자리의 2진수를 '비트'라고 하며, 1비트는 컴퓨터가 값을 저장할 수 있는 최소단위이다.
+//1비트 8개를 묶어서 '바이트'라는 단위로 정해서 데이터 기본 단위로 사용한다.
+
+//*워드(word)
+//CPU가 한 번에 처리할 수 있는 데이터의 크기를 의미.
+// 32비트는 CPU에서 1워드(4바이트) 64비트 CPU에서는 8바이트이다.
+
+//n비트로 2^n개의 값을 표현할 수 있다.
+// 1bit:2개
+// 2bit:2^2(4)개
+// 3bit:2^3(8)개
+//....
+
+//*2진수
+// 20-> 10100
+// 30 ->11100
+
+//*8진법과 16진법
+//8진수는 2진수 3자리를, 16진수는 2진수 4자리를 각각 한자리로 표현할 수 있기 때문에
+//자릿수가 짧아져서 알아보기 쉽고 , 서로 간의 변환방법 또한 매우 간단하다.
+
+//*2진수 ->8진수 :2진수를 뒤에서부터 3자리씩 끊어서 그에 해당하는 8진수로 바꾼다.
+// 1010101100 -> 1 010 101 100
+//               1 2    5   4 ->1254(8)
+
+//*2진수->16진수:2진수를 뒤에서부터 4자리씩 끊어서 그에 해당하는 16진수로 바꾼다.
+//16진수 : 0, 1, 2, 3, 4, 5,6, 7, 8, 9, A, B, C, D, E, F, 10, .....
+//1010101100 -> 10 1010 1100->12AC
+
+-------------------D_scanner_print
+package com.himedia.java;
+
+import java.util.Scanner;
+
+public class D_scanner_print {
+
+    public static void main(String[] args) {
+
+        String name = "홍길동";
+        System.out.printf("이름 : %s \n 나이: %d \n", name, 25);
+
+        int age = 25;
+        System.out.printf("나이 : %d\n", age);
+
+        System.out.printf("[자기소개]\n안녕하세요!\n만나서 반갑습니다.\n");
+
+        System.out.println("당신의 이름은 무엇입니까?");
+        Scanner sc= new Scanner(System.in);
+        String userName=sc.nextLine();
+        System.out.printf("제 이름은 %s 입니다.\n", userName);
+    }
+}
+
+-----------e_casting
+package com.himedia.java;
+
+//*형변환
+//변수 또는 상수의 타입을 다른 타입으로 변환하는 건ㅅ.
+//기본형에서 boolean을 제외한 나머지 타입들은 서로 형ㅇ변환이 가능하다.
+
+//* 암시적(자동) 형변환과 명시적(강제) 형변환이 있다.
+//암시적 형변환은 더 작은 자료형으로 변환될 때 자동으로 이루어지며,
+//명시적 형변환은 반대로 더 큰 자료형을 더 작은 자료형으로 변환할 때 명시적으로 해야 한다.
+
+//* 암시적 형변환 순서(작은크기->큰크기)
+//1. byte ->short ->int -> long -> float ->double
+// 2. char ->int ->long ->float->double
+// 이 순서대로 자료형이 자동으로 변환될 수 있으며, 변환 중 데이터 손실이 없거나 적은 경우에 암시적 형변환이 이루어진다.
+
+public class E_casting {
+
+    public static void main(String[] args) {
+
+        double d=3.14;
+        System.out.println(d);
+        int score = (int)d;
+        System.out.println(score);
+
+        //int->char
+        int a=65;
+        System.out.println(a);
+        char ch=(char)a;
+        System.out.println(ch);
+
+        // char -> int
+        char ch2='A';
+        System.out.println(ch2);
+        int a2=ch2;
+        System.out.println(a2);
+
+        //float ->int
+        int n=3;
+        System.out.println(n);
+        float f=n;
+        System.out.println(f);
+
+        //암시적 형변환
+        byte b=10;
+        int i = b;
+        System.out.println(i);
+
+        int k=100;
+        double d2 =k;
+        System.out.println(d2);
+    }
+}
+
+-----------F_operator
+
+Sout 엔터 ->system.out.println
+
+ctrl+d 다음줄복사
+
+package com.himedia.java;
+
+//*연산자
+//-산술연산자 : +, -, *, /, %
+//-단항연산자 :++, --
+//-비교연산자 : >, <. =>, =<, ==, !=
+//-논리연산자 : &&, ||, !, &, |, ^, ~
+//-대입연산자 : =
+//-기타 : ? :, 복합대입연산자
+
+//*연산자의 우선순위
+//곱셈과 나눗셈은 덧셈과 뺄셈보다 우선 순위가 높다.
+
+public class F_operator {
+
+   package com.himedia.java;
+
+//*연산자
+//-산술연산자 : +, -, *, /, %
+//-단항연산자 :++, --
+//-비교연산자 : >, <. =>, =<, ==, !=
+//-논리연산자 : &&, ||, !, &, |, ^, ~
+//-대입연산자 : =
+//-기타 : ? :, 복합대입연산자
+
+//*연산자의 우선순위
+//곱셈과 나눗셈은 덧셈과 뺄셈보다 우선 순위가 높다.
+
+public class F_operator {
+
+    public static void exam1() {
+        int a=10;
+        int b=4;
+
+        System.out.printf("%d+ %d = %d\n", a, b, a+b);
+        System.out.printf("%d- %d = %d\n", a, b, a-b);
+        System.out.printf("%d* %d = %d\n", a, b, a*b);
+        System.out.printf("%d/ %d = %d\n", a, b, a/b);
+        System.out.printf("%d/ %d = %f\n", a, b, a/(double)b);
+        System.out.printf("%d+ %d = %d\n", a, b, a%b);
+
+
+    }
+    public static void exam2() {
+        //증감 연산자 : 피연산자의 값을 1 증가시킨다.
+        //i=i+1, i+=1
+        int i=5;
+        System.out.println("====증감 ====");
+        System.out.println("전위형 : "+ ++i);//->6
+        System.out.println("후위형 : "+ i++);//->6
+        System.out.println("결과 :" +i);//->7
+        //감소 연산자: 피연산자아ㅢ 값을 1 감소시킨다.
+        i=5;
+        System.out.println("====감소 ====");
+        System.out.println("전위형 : "+ --i);//->4
+        System.out.println("후위형 : "+ i--);//->4
+        System.out.println("결과 :" +i);//->3
+
+        i =i+1;
+        i-=1;
+        i+=4;
+    }
+    public static void main(String[] args) {
+        exam2();
+
+
+
+
+    }
+}
